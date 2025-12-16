@@ -196,10 +196,23 @@
         }
         
         .blanks {
-            font-size: 18px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        .blank-box {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
             font-weight: bold;
-            letter-spacing: 8px;
-            margin-top: 5px;
+            background: white;
         }
         
         .challenge-game {
@@ -347,7 +360,10 @@
 <!-- PAGE 3: PRACTICE GAMES -->
 <div class="page">
     <h1 style="font-size: 28px;">🎮 PRACTICE GAMES</h1>
-    <p style="text-align: center; margin-bottom: 20px;">Use your finger to 'jump' through the boxes on the table!</p>
+    <p style="text-align: center; margin-bottom: 10px;">Use your finger to 'jump' through the boxes on the table!</p>
+    <p style="text-align: center; margin-bottom: 20px; background: #FFF3CD; padding: 10px; border-radius: 5px; font-weight: bold;">
+        ⬆️ Remember: Start at the bottom where it says "START" and jump UP! ⬆️
+    </p>
     
     <div class="quick-decoder">
         <h3 style="margin-bottom: 10px; color: #4ECDC4;">QUICK DECODER:</h3>
@@ -372,14 +388,18 @@
         <div class="game-box">
             <div class="game-title easy">Game 1: EASY</div>
             <div class="hopscotch-mini">
-                <div class="hop-box">⭐</div>
-                <div class="hop-box">❤️</div>
                 <div class="hop-box">🔵</div>
-                <div class="start-label">START</div>
+                <div class="hop-box">❤️</div>
+                <div class="hop-box">⭐</div>
+                <div class="start-label">START ↑</div>
             </div>
             <div class="answer-space">
-                Answer:<br>
-                <div class="blanks">___ ___ ___</div>
+                Answer:
+                <div class="blanks">
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                </div>
             </div>
         </div>
         
@@ -387,17 +407,22 @@
         <div class="game-box">
             <div class="game-title medium">Game 2: MEDIUM</div>
             <div class="hopscotch-mini">
-                <div class="hop-box">🌙</div>
+                <div class="hop-box">☀️</div>
                 <div class="hop-row">
                     <div class="hop-box">❤️</div>
                     <div class="hop-box">🌸</div>
                 </div>
-                <div class="hop-box">☀️</div>
-                <div class="start-label">START</div>
+                <div class="hop-box">🌙</div>
+                <div class="start-label">START ↑</div>
             </div>
             <div class="answer-space">
-                Answer:<br>
-                <div class="blanks" style="font-size: 16px;">___ ___ ___ ___</div>
+                Answer:
+                <div class="blanks">
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                </div>
             </div>
         </div>
         
@@ -405,17 +430,22 @@
         <div class="game-box">
             <div class="game-title medium">Game 3: MEDIUM</div>
             <div class="hopscotch-mini">
-                <div class="hop-box">🌊</div>
+                <div class="hop-box">🌙</div>
                 <div class="hop-row">
                     <div class="hop-box">🔵</div>
                     <div class="hop-box">❤️</div>
                 </div>
-                <div class="hop-box">🌙</div>
-                <div class="start-label">START</div>
+                <div class="hop-box">🌊</div>
+                <div class="start-label">START ↑</div>
             </div>
             <div class="answer-space">
-                Answer:<br>
-                <div class="blanks" style="font-size: 16px;">___ ___ ___ ___</div>
+                Answer:
+                <div class="blanks">
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -426,23 +456,491 @@
             Game 4: HARD - Can you decode this?
         </div>
         <div class="hopscotch-mini" style="margin: 20px auto;">
-            <div class="hop-box">🔵</div>
-            <div class="hop-row">
-                <div class="hop-box">🌙</div>
-                <div class="hop-box">❤️</div>
-            </div>
-            <div class="hop-box">🌸</div>
             <div class="hop-box">☀️</div>
-            <div class="start-label">START</div>
+            <div class="hop-row">
+                <div class="hop-box">❤️</div>
+                <div class="hop-box">🌸</div>
+            </div>
+            <div class="hop-box">🌙</div>
+            <div class="hop-box">🔵</div>
+            <div class="start-label">START ↑</div>
         </div>
         <div class="answer-space">
-            Answer:<br>
-            <div class="blanks" style="font-size: 16px;">___ ___ ___ ___ ___</div>
+            Answer:
+            <div class="blanks">
+                <div class="blank-box"></div>
+                <div class="blank-box"></div>
+                <div class="blank-box"></div>
+                <div class="blank-box"></div>
+                <div class="blank-box"></div>
+            </div>
         </div>
     </div>
     
     <div class="footer" style="margin-top: 40px;">
         Great job! Now you're ready to play on the playground! 🌟
+    </div>
+</div>
+
+<!-- PAGE 4: MORE PRACTICE -->
+<div class="page">
+    <h1 style="font-size: 28px;">📚 MORE PRACTICE GAMES</h1>
+    <p style="text-align: center; margin-bottom: 20px;">Keep practicing to become a decoding expert!</p>
+    
+    <div class="quick-decoder">
+        <h3 style="margin-bottom: 10px; color: #4ECDC4;">QUICK DECODER:</h3>
+        <div class="decoder-grid">
+            <div class="decoder-item">⭐ = C</div>
+            <div class="decoder-item">🌸 = I</div>
+            <div class="decoder-item">🌊 = S</div>
+            <div class="decoder-item">❤️ = A</div>
+            <div class="decoder-item">☀️ = N</div>
+            <div class="decoder-item">⚡ = E</div>
+            <div class="decoder-item">🔵 = T</div>
+            <div class="decoder-item">🍎 = P</div>
+            <div class="decoder-item">😊 = O</div>
+            <div class="decoder-item">🌙 = R</div>
+        </div>
+    </div>
+    
+    <!-- EASY SECTION -->
+    <h3 style="margin-top: 20px; color: #95E1D3;">✨ EASY LEVEL (3 Letters):</h3>
+    <div class="games-container">
+        <!-- Easy 1: PET -->
+        <div class="game-box">
+            <div class="game-title easy">Game 5</div>
+            <div class="hopscotch-mini">
+                <div class="hop-box">🔵</div>
+                <div class="hop-box">⚡</div>
+                <div class="hop-box">🍎</div>
+                <div class="start-label">START ↑</div>
+            </div>
+            <div class="answer-space">
+                Answer:
+                <div class="blanks">
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Easy 2: POT -->
+        <div class="game-box">
+            <div class="game-title easy">Game 6</div>
+            <div class="hopscotch-mini">
+                <div class="hop-box">🔵</div>
+                <div class="hop-box">😊</div>
+                <div class="hop-box">🍎</div>
+                <div class="start-label">START ↑</div>
+            </div>
+            <div class="answer-space">
+                Answer:
+                <div class="blanks">
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Easy 3: NET -->
+        <div class="game-box">
+            <div class="game-title easy">Game 7</div>
+            <div class="hopscotch-mini">
+                <div class="hop-box">🔵</div>
+                <div class="hop-box">⚡</div>
+                <div class="hop-box">☀️</div>
+                <div class="start-label">START ↑</div>
+            </div>
+            <div class="answer-space">
+                Answer:
+                <div class="blanks">
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MEDIUM SECTION -->
+    <h3 style="margin-top: 25px; color: #F9A826;">🔥 MEDIUM LEVEL (4 Letters):</h3>
+    <div class="games-container">
+        <!-- Medium 1: COAT -->
+        <div class="game-box">
+            <div class="game-title medium">Game 8</div>
+            <div class="hopscotch-mini">
+                <div class="hop-box">🔵</div>
+                <div class="hop-row">
+                    <div class="hop-box">❤️</div>
+                    <div class="hop-box">😊</div>
+                </div>
+                <div class="hop-box">⭐</div>
+                <div class="start-label">START ↑</div>
+            </div>
+            <div class="answer-space">
+                Answer:
+                <div class="blanks">
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Medium 2: POTS -->
+        <div class="game-box">
+            <div class="game-title medium">Game 9</div>
+            <div class="hopscotch-mini">
+                <div class="hop-box">🌊</div>
+                <div class="hop-row">
+                    <div class="hop-box">🔵</div>
+                    <div class="hop-box">😊</div>
+                </div>
+                <div class="hop-box">🍎</div>
+                <div class="start-label">START ↑</div>
+            </div>
+            <div class="answer-space">
+                Answer:
+                <div class="blanks">
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Medium 3: ARTS -->
+        <div class="game-box">
+            <div class="game-title medium">Game 10</div>
+            <div class="hopscotch-mini">
+                <div class="hop-box">🌊</div>
+                <div class="hop-row">
+                    <div class="hop-box">🔵</div>
+                    <div class="hop-box">🌙</div>
+                </div>
+                <div class="hop-box">❤️</div>
+                <div class="start-label">START ↑</div>
+            </div>
+            <div class="answer-space">
+                Answer:
+                <div class="blanks">
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                    <div class="blank-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- HARD SECTION -->
+    <h3 style="margin-top: 25px; color: #E74C3C;">💪 HARD LEVEL (5 Letters):</h3>
+    <div class="games-container">
+        <!-- Hard 1: SPORT -->
+        <div class="game-box">
+            <div class="game-title hard">Game 11</div>
+            <div class="hopscotch-mini">
+                <div class="hop-box">🔵</div>
+                <div class="hop-row">
+                    <div class="hop-box">🌙</div>
+                    <div class="hop-box">😊</div>
+                </div>
+                <div class="hop-box">🍎</div>
+                <div class="hop-box">🌊</div>
+                <div class="start-label">START ↑</div>
+            </div>
+            <div class="answer-space">
+                Answer:
+                <div class="blanks" style="gap: 5px;">
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hard 2: STONE -->
+        <div class="game-box">
+            <div class="game-title hard">Game 12</div>
+            <div class="hopscotch-mini">
+                <div class="hop-box">⚡</div>
+                <div class="hop-row">
+                    <div class="hop-box">☀️</div>
+                    <div class="hop-box">😊</div>
+                </div>
+                <div class="hop-box">🔵</div>
+                <div class="hop-box">🌊</div>
+                <div class="start-label">START ↑</div>
+            </div>
+            <div class="answer-space">
+                Answer:
+                <div class="blanks" style="gap: 5px;">
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hard 3: PRINT -->
+        <div class="game-box">
+            <div class="game-title hard">Game 13</div>
+            <div class="hopscotch-mini">
+                <div class="hop-box">🔵</div>
+                <div class="hop-row">
+                    <div class="hop-box">☀️</div>
+                    <div class="hop-box">🌸</div>
+                </div>
+                <div class="hop-box">🌙</div>
+                <div class="hop-box">🍎</div>
+                <div class="start-label">START ↑</div>
+            </div>
+            <div class="answer-space">
+                Answer:
+                <div class="blanks" style="gap: 5px;">
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                    <div class="blank-box" style="width: 35px; height: 35px; font-size: 16px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer" style="margin-top: 30px;">
+        Excellent work! Turn to Page 5 for special challenges! →
+    </div>
+</div>
+
+<!-- PAGE 5: TWIST CHALLENGES -->
+<div class="page">
+    <h1 style="font-size: 28px;">🎪 SPECIAL CHALLENGES!</h1>
+    <p style="text-align: center; margin-bottom: 20px;">These are different and tricky - but you can do it!</p>
+    
+    <div class="quick-decoder">
+        <h3 style="margin-bottom: 10px; color: #4ECDC4;">QUICK DECODER:</h3>
+        <div class="decoder-grid">
+            <div class="decoder-item">⭐ = C</div>
+            <div class="decoder-item">🌸 = I</div>
+            <div class="decoder-item">🌊 = S</div>
+            <div class="decoder-item">❤️ = A</div>
+            <div class="decoder-item">☀️ = N</div>
+            <div class="decoder-item">⚡ = E</div>
+            <div class="decoder-item">🔵 = T</div>
+            <div class="decoder-item">🍎 = P</div>
+            <div class="decoder-item">😊 = O</div>
+            <div class="decoder-item">🌙 = R</div>
+        </div>
+    </div>
+    
+    <!-- TWIST 1: MISSING LETTER -->
+    <div style="background: #FFF3CD; padding: 20px; border-radius: 10px; margin: 25px 0; border: 3px solid #FFC107;">
+        <h2 style="text-align: center; color: #E74C3C; margin-bottom: 15px;">🔍 TWIST #1: FIND THE MISSING SYMBOL!</h2>
+        <p style="text-align: center; margin-bottom: 20px; font-size: 14px;">
+            One symbol is hidden with "❓". Figure out which symbol is missing to make a real word!
+        </p>
+        
+        <div class="games-container">
+            <!-- Missing 1: C_T (missing A) = CAT -->
+            <div class="game-box">
+                <div class="hopscotch-mini">
+                    <div class="hop-box">🔵</div>
+                    <div class="hop-box" style="background: #FFE5E5;">❓</div>
+                    <div class="hop-box">⭐</div>
+                    <div class="start-label">START ↑</div>
+                </div>
+                <div class="answer-space">
+                    <div style="font-size: 13px; margin-bottom: 8px;">Missing symbol:</div>
+                    <div class="blanks">
+                        <div class="blank-box" style="width: 50px; height: 50px;"></div>
+                    </div>
+                    <div style="font-size: 13px; margin-top: 8px;">Word:</div>
+                    <div class="blanks">
+                        <div class="blank-box"></div>
+                        <div class="blank-box"></div>
+                        <div class="blank-box"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Missing 2: RA_N (missing I) = RAIN -->
+            <div class="game-box">
+                <div class="hopscotch-mini">
+                    <div class="hop-box">☀️</div>
+                    <div class="hop-box" style="background: #FFE5E5;">❓</div>
+                    <div class="hop-box">❤️</div>
+                    <div class="hop-box">🌙</div>
+                    <div class="start-label">START ↑</div>
+                </div>
+                <div class="answer-space">
+                    <div style="font-size: 13px; margin-bottom: 8px;">Missing symbol:</div>
+                    <div class="blanks">
+                        <div class="blank-box" style="width: 50px; height: 50px;"></div>
+                    </div>
+                    <div style="font-size: 13px; margin-top: 8px;">Word:</div>
+                    <div class="blanks" style="gap: 5px;">
+                        <div class="blank-box" style="width: 35px; height: 35px;"></div>
+                        <div class="blank-box" style="width: 35px; height: 35px;"></div>
+                        <div class="blank-box" style="width: 35px; height: 35px;"></div>
+                        <div class="blank-box" style="width: 35px; height: 35px;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Missing 3: S_AR (missing T) = STAR -->
+            <div class="game-box">
+                <div class="hopscotch-mini">
+                    <div class="hop-box">🌙</div>
+                    <div class="hop-box">❤️</div>
+                    <div class="hop-box" style="background: #FFE5E5;">❓</div>
+                    <div class="hop-box">🌊</div>
+                    <div class="start-label">START ↑</div>
+                </div>
+                <div class="answer-space">
+                    <div style="font-size: 13px; margin-bottom: 8px;">Missing symbol:</div>
+                    <div class="blanks">
+                        <div class="blank-box" style="width: 50px; height: 50px;"></div>
+                    </div>
+                    <div style="font-size: 13px; margin-top: 8px;">Word:</div>
+                    <div class="blanks" style="gap: 5px;">
+                        <div class="blank-box" style="width: 35px; height: 35px;"></div>
+                        <div class="blank-box" style="width: 35px; height: 35px;"></div>
+                        <div class="blank-box" style="width: 35px; height: 35px;"></div>
+                        <div class="blank-box" style="width: 35px; height: 35px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- TWIST 2: TWO WORDS -->
+    <div style="background: #E3F2FD; padding: 20px; border-radius: 10px; margin: 25px 0; border: 3px solid #2196F3;">
+        <h2 style="text-align: center; color: #1976D2; margin-bottom: 15px;">✨ TWIST #2: DECODE TWO WORDS!</h2>
+        <p style="text-align: center; margin-bottom: 20px; font-size: 14px;">
+            Each hopscotch has TWO separate words. Decode both!
+        </p>
+        
+        <div class="games-container">
+            <!-- Two Words 1: AT + IN -->
+            <div class="game-box">
+                <div style="display: flex; gap: 20px; justify-content: center;">
+                    <div>
+                        <div style="font-weight: bold; text-align: center; margin-bottom: 5px; color: #1976D2;">Word 1</div>
+                        <div class="hopscotch-mini" style="transform: scale(0.9);">
+                            <div class="hop-box">🔵</div>
+                            <div class="hop-box">❤️</div>
+                            <div class="start-label" style="font-size: 10px;">START ↑</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-weight: bold; text-align: center; margin-bottom: 5px; color: #1976D2;">Word 2</div>
+                        <div class="hopscotch-mini" style="transform: scale(0.9);">
+                            <div class="hop-box">☀️</div>
+                            <div class="hop-box">🌸</div>
+                            <div class="start-label" style="font-size: 10px;">START ↑</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer-space" style="margin-top: 15px;">
+                    <div class="blanks" style="gap: 3px;">
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                    </div>
+                    <div style="margin: 5px 0;">+</div>
+                    <div class="blanks" style="gap: 3px;">
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Two Words 2: PAN + TEN -->
+            <div class="game-box">
+                <div style="display: flex; gap: 20px; justify-content: center;">
+                    <div>
+                        <div style="font-weight: bold; text-align: center; margin-bottom: 5px; color: #1976D2;">Word 1</div>
+                        <div class="hopscotch-mini" style="transform: scale(0.9);">
+                            <div class="hop-box">☀️</div>
+                            <div class="hop-box">❤️</div>
+                            <div class="hop-box">🍎</div>
+                            <div class="start-label" style="font-size: 10px;">START ↑</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-weight: bold; text-align: center; margin-bottom: 5px; color: #1976D2;">Word 2</div>
+                        <div class="hopscotch-mini" style="transform: scale(0.9);">
+                            <div class="hop-box">☀️</div>
+                            <div class="hop-box">⚡</div>
+                            <div class="hop-box">🔵</div>
+                            <div class="start-label" style="font-size: 10px;">START ↑</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer-space" style="margin-top: 15px;">
+                    <div class="blanks" style="gap: 3px;">
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                    </div>
+                    <div style="margin: 5px 0;">+</div>
+                    <div class="blanks" style="gap: 3px;">
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Two Words 3: CAR + POT -->
+            <div class="game-box">
+                <div style="display: flex; gap: 20px; justify-content: center;">
+                    <div>
+                        <div style="font-weight: bold; text-align: center; margin-bottom: 5px; color: #1976D2;">Word 1</div>
+                        <div class="hopscotch-mini" style="transform: scale(0.9);">
+                            <div class="hop-box">🌙</div>
+                            <div class="hop-box">❤️</div>
+                            <div class="hop-box">⭐</div>
+                            <div class="start-label" style="font-size: 10px;">START ↑</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-weight: bold; text-align: center; margin-bottom: 5px; color: #1976D2;">Word 2</div>
+                        <div class="hopscotch-mini" style="transform: scale(0.9);">
+                            <div class="hop-box">🔵</div>
+                            <div class="hop-box">😊</div>
+                            <div class="hop-box">🍎</div>
+                            <div class="start-label" style="font-size: 10px;">START ↑</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer-space" style="margin-top: 15px;">
+                    <div class="blanks" style="gap: 3px;">
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                    </div>
+                    <div style="margin: 5px 0;">+</div>
+                    <div class="blanks" style="gap: 3px;">
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                        <div class="blank-box" style="width: 30px; height: 30px; font-size: 14px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer" style="margin-top: 30px;">
+        🎉 AMAZING! You completed all the challenges! You're a decoding EXPERT! 🌟
     </div>
 </div>
 

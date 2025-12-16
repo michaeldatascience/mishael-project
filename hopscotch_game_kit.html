@@ -20,19 +20,22 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
+            background: #f5f5f5;
+            padding: 10px;
         }
         
         .page {
-            width: 21cm;
-            min-height: 29.7cm;
-            padding: 1.5cm;
+            max-width: 900px;
+            width: 100%;
+            padding: 20px;
             background: white;
-            page-break-after: always;
-            position: relative;
+            margin: 0 auto 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .page:last-child {
-            page-break-after: auto;
+            margin-bottom: 30px;
         }
         
         h1 {
@@ -51,7 +54,8 @@
         h3 {
             color: #FF6B6B;
             font-size: 16px;
-            margin: 15px 0 8px 0;
+            margin: 30px 0 10px 0;
+            clear: both;
         }
         
         .subtitle {
@@ -63,7 +67,8 @@
         }
         
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            clear: both;
         }
         
         ul {
@@ -77,9 +82,15 @@
         
         .decoder-cards {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
             gap: 8px;
             margin: 20px 0;
+        }
+        
+        @media (max-width: 600px) {
+            .decoder-cards {
+                grid-template-columns: repeat(5, 1fr);
+            }
         }
         
         .card {
@@ -107,13 +118,15 @@
         
         .practice-section {
             margin-top: 30px;
+            clear: both;
         }
         
         .quick-decoder {
             background: #f0f0f0;
             padding: 15px;
             border-radius: 8px;
-            margin: 15px 0;
+            margin: 15px 0 20px 0;
+            clear: both;
         }
         
         .decoder-grid {
@@ -129,9 +142,16 @@
         
         .games-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            margin: 20px 0;
+            margin: 20px 0 40px 0;
+            clear: both;
+        }
+        
+        @media (max-width: 768px) {
+            .games-container {
+                grid-template-columns: 1fr;
+            }
         }
         
         .game-box {
@@ -237,9 +257,79 @@
         }
         
         @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
             .page {
                 margin: 0;
                 box-shadow: none;
+                page-break-after: always;
+            }
+            
+            .page:last-child {
+                page-break-after: auto;
+            }
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 5px;
+            }
+            
+            .page {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+            
+            h1 {
+                font-size: 24px !important;
+            }
+            
+            h2 {
+                font-size: 16px !important;
+            }
+            
+            h3 {
+                font-size: 14px !important;
+            }
+            
+            .subtitle {
+                font-size: 16px !important;
+            }
+            
+            .decoder-grid {
+                grid-template-columns: repeat(2, 1fr);
+                font-size: 12px;
+            }
+            
+            .card {
+                min-height: 80px;
+                padding: 10px;
+            }
+            
+            .card .symbol {
+                font-size: 32px;
+            }
+            
+            .card .letter {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px !important;
+            }
+            
+            h2 {
+                font-size: 14px !important;
+            }
+            
+            .decoder-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -743,7 +833,7 @@
     </div>
     
     <!-- TWIST 1: MISSING LETTER -->
-    <div style="background: #FFF3CD; padding: 20px; border-radius: 10px; margin: 25px 0; border: 3px solid #FFC107;">
+    <div style="background: #FFF3CD; padding: 20px; border-radius: 10px; margin: 25px 0 60px 0; border: 3px solid #FFC107;">
         <h2 style="text-align: center; color: #E74C3C; margin-bottom: 15px;">🔍 TWIST #1: FIND THE MISSING SYMBOL!</h2>
         <p style="text-align: center; margin-bottom: 20px; font-size: 14px;">
             One symbol is hidden with "❓". Figure out which symbol is missing to make a real word!
@@ -823,7 +913,7 @@
     </div>
     
     <!-- TWIST 2: TWO WORDS -->
-    <div style="background: #E3F2FD; padding: 20px; border-radius: 10px; margin: 25px 0; border: 3px solid #2196F3;">
+    <div style="background: #E3F2FD; padding: 20px; border-radius: 10px; margin: 25px 0 60px 0; border: 3px solid #2196F3;">
         <h2 style="text-align: center; color: #1976D2; margin-bottom: 15px;">✨ TWIST #2: DECODE TWO WORDS!</h2>
         <p style="text-align: center; margin-bottom: 20px; font-size: 14px;">
             Each hopscotch has TWO separate words. Decode both!
@@ -966,7 +1056,7 @@
     </div>
     
     <!-- TWIST 3: WORD BUILDING -->
-    <div style="background: #F3E5F5; padding: 20px; border-radius: 10px; margin: 25px 0; border: 3px solid #9C27B0;">
+    <div style="background: #F3E5F5; padding: 20px; border-radius: 10px; margin: 25px 0 60px 0; border: 3px solid #9C27B0;">
         <h2 style="text-align: center; color: #7B1FA2; margin-bottom: 15px;">🧩 TWIST #3: WORD BUILDING!</h2>
         <p style="text-align: center; margin-bottom: 20px; font-size: 14px;">
             Decode THREE small words and see what they make together!
@@ -1138,7 +1228,7 @@
     </div>
     
     <!-- TWIST 4: REVERSE CHALLENGE (ENCODING) -->
-    <div style="background: #FFF9C4; padding: 20px; border-radius: 10px; margin: 25px 0; border: 3px solid #F57F17;">
+    <div style="background: #FFF9C4; padding: 20px; border-radius: 10px; margin: 25px 0 60px 0; border: 3px solid #F57F17;">
         <h2 style="text-align: center; color: #F57F17; margin-bottom: 15px;">🔄 TWIST #4: REVERSE CHALLENGE - YOU ENCODE!</h2>
         <p style="text-align: center; margin-bottom: 20px; font-size: 14px;">
             Now YOU are the coder! Look at the word and DRAW the symbols!
@@ -1231,7 +1321,7 @@
     </div>
     
     <!-- TWIST 5: UNSCRAMBLE -->
-    <div style="background: #E8F5E9; padding: 20px; border-radius: 10px; margin: 25px 0; border: 3px solid #4CAF50;">
+    <div style="background: #E8F5E9; padding: 20px; border-radius: 10px; margin: 25px 0 60px 0; border: 3px solid #4CAF50;">
         <h2 style="text-align: center; color: #2E7D32; margin-bottom: 15px;">🔀 TWIST #5: UNSCRAMBLE!</h2>
         <p style="text-align: center; margin-bottom: 20px; font-size: 14px;">
             The symbols are in the WRONG ORDER! Put them in the right order to find the word!
@@ -1333,7 +1423,7 @@
     </div>
     
     <!-- TWIST 6: RHYME MATCH -->
-    <div style="background: #FCE4EC; padding: 20px; border-radius: 10px; margin: 25px 0; border: 3px solid #E91E63;">
+    <div style="background: #FCE4EC; padding: 20px; border-radius: 10px; margin: 25px 0 60px 0; border: 3px solid #E91E63;">
         <h2 style="text-align: center; color: #C2185B; margin-bottom: 15px;">🎵 TWIST #6: RHYME TIME!</h2>
         <p style="text-align: center; margin-bottom: 20px; font-size: 14px;">
             Decode TWO words - they RHYME with each other!
